@@ -1,0 +1,23 @@
+<html lang="ja">
+	<head>
+		<title>2-10</title>
+	</head>
+	<body>
+		<script>
+			let width = 0;
+			let height = 0;
+			const PI = 3.1416;
+			function changeRadius(value){
+				if(value != null){
+					const num = Math.round(value);
+					width = num;
+					document.getElementById("inputR").value = num;
+					console.log('表面積は' + (4 * PI * num * num) + 'です');
+					console.log('体積は' + (4 / 3.0 * PI * num * num * num) + 'です');
+				}
+			}
+		</script>
+		<div>球の表面積と体積を求めます</div>
+		<label for="inputR">半径:</label><input id='inputR' type='number' onchange="changeRadius(value)">
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<html lang="ja">
+	<head>
+		<title>2-8</title>
+	</head>
+	<body>
+		<script>
+			let numX = 0;
+			let numY = 0;
+			function changeX(value){
+				if(value != null){
+					const num = Math.round(value);
+					numX = num;
+					document.getElementById("inputX").value = num;
+					output();
+				}
+			}
+			function changeY(value){
+				if(value != null){
+					const num = Math.round(value);
+					numY = num;
+					document.getElementById("inputY").value = num;
+					output();
+				}
+			}
+			function output(){
+				console.log('合計は' + (numX + numY) + 'です');
+				console.log('平均は' + (numX + numY)/2 + 'です');
+			}
+		</script>
+		<label for="inputX">xの値:</label><input id='inputX' type='number' onchange="changeX(value)"><br/>
+		<label for="inputY">yの値:</label><input id='inputY' type='number' onchange="changeY(value)">
+	</body>
+</html>

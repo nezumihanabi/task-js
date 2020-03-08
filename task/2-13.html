@@ -1,0 +1,15 @@
+<html lang="ja">
+	<head>
+		<title>2-13</title>
+	</head>
+	<body>
+		<script>
+			window.onload = function(){
+				console.log('3個の乱数を生成しました。');
+				console.log('0.0以上1.0未満：' + (Math.random() * 0.9).toFixed(1));
+				console.log('0.0以上10.0未満：' + (Math.random() * 9.9).toFixed(1));
+				console.log('-1.0以上1.0未満：' + (Math.random() * 0.9 + (Math.random() * -1.0)).toFixed(1));
+			}
+		</script>
+	</body>
+</html>

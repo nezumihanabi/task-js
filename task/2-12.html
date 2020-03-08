@@ -1,0 +1,25 @@
+<html lang="ja">
+	<head>
+		<title>2-9</title>
+	</head>
+	<body>
+		<script>
+			let inputNum = 0;
+			function changeInteger(value){
+				if(value != null){
+					const num = Math.round(value);
+					inputNum = num;
+					document.getElementById("integer").value = num;
+					output();
+				}
+			}
+			function output(){
+				const flg = Math.round(Math.random() * 9);
+				const rnd = Math.round(Math.random() * 5) * (flg > 4 ? 1 : -1);
+				console.log('その値±5の乱数を生成しました');
+				console.log('値は' + (inputNum + rnd) + 'です');
+			}
+		</script>
+		<label for="integer">整数値:</label><input id='integer' type='number' onchange="changeInteger(value)"><br/>
+	</body>
+</html>
