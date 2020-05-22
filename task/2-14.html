@@ -1,0 +1,33 @@
+<html lang="ja">
+	<head>
+		<title>2-14</title>
+	</head>
+	<body>
+		<script>
+			let lastName = '';
+			let firstName = '';
+
+			function changeLastName(value){
+				if(value != null){
+					lastName = value;
+				}
+				output();
+			}
+
+			function changeFirstName(value){
+				if(value != null){
+					firstName = value;
+				}
+				output();
+			}
+
+			function output(){
+				console.log('姓:' + lastName);
+				console.log('名:' + firstName);
+				console.log('こんにちは' + lastName + firstName + 'さん');
+			}
+		</script>
+		<label for="lastName">姓:</label><input id='lastName' type='string' onchange="changeLastName(value)">
+		<label for="firstName">名:</label><input id='firstName' type='string' onchange="changeFirstName(value)">
+	</body>
+</html>

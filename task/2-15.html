@@ -1,0 +1,22 @@
+<html lang="ja">
+	<head>
+		<title>2-15</title>
+	</head>
+	<body>
+		<script>
+			let address = '';
+
+			function changeAddress(value){
+				if(value != null){
+					address = value;
+				}
+				output();
+			}
+
+			function output(){
+				console.log('お住まいは' + address + 'ですね');
+			}
+		</script>
+		<label for="address">住所:</label><input id='address' type='string' onchange="changeAddress(value)">
+	</body>
+</html>

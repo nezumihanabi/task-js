@@ -1,0 +1,18 @@
+<html lang="ja">
+	<head>
+		<title>2-6</title>
+	</head>
+	<body>
+		<script>
+			function output(value){
+				if(value != null){
+					const num = Math.round(value);
+					document.getElementById("input").value = num;
+					console.log('10を加えた数は' + (num + 10) + 'です');
+					console.log('10を減じた数は' + (num - 10) + 'です');
+				}
+			}
+		</script>
+		<label for="input">整数値:</label><input id='input' type='number' onchange="output(value)">
+	</body>
+</html>

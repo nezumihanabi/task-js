@@ -1,0 +1,15 @@
+<html lang="ja">
+	<head>
+		<title>2-11</title>
+	</head>
+	<body>
+		<script>
+			window.onload = function(){
+				console.log('3個の乱数を生成しました。');
+				console.log('1桁の正の整数：' + Math.ceil(Math.random()*9));
+				console.log('1桁の負の整数：' + Math.ceil(Math.random()*9) * -1);
+				console.log('2桁の正の整数：' + (Math.floor(Math.random()*90) + 10));
+			}
+		</script>
+	</body>
+</html>

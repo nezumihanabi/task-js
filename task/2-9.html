@@ -1,0 +1,32 @@
+<html lang="ja">
+	<head>
+		<title>2-9</title>
+	</head>
+	<body>
+		<script>
+			let width = 0;
+			let height = 0;
+			function changeWidth(value){
+				if(value != null){
+					const num = Math.round(value);
+					width = num;
+					document.getElementById("inputW").value = num;
+					output();
+				}
+			}
+			function changeHeight(value){
+				if(value != null){
+					const num = Math.round(value);
+					height = num;
+					document.getElementById("inputH").value = num;
+					output();
+				}
+			}
+			function output(){
+				console.log('面積は' + (width + height) / 2 + 'です');
+			}
+		</script>
+		<label for="inputW">底辺:</label><input id='inputW' type='number' onchange="changeWidth(value)"><br/>
+		<label for="inputH">高さ:</label><input id='inputH' type='number' onchange="changeHeight(value)">
+	</body>
+</html>
